@@ -15,7 +15,7 @@ pipelines:
 
             # Clone the master branch into the 'public' directory.
             # This will enable updates to the master branch; namely the Hugo-generated output.
-            - git clone -b main ssh://git@bitbucket.org/himanshu106/himanshu106.bitbucket.io public
+            #- git clone -b main ssh://git@bitbucket.org/himanshu106/himanshu106.bitbucket.io public
 
             # Remove the entire contents of the master branch.
             # This ensures that any content that was deleted during the latest commit (hugo branch) is also purged.
