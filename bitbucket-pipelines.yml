@@ -1,0 +1,42 @@
+image: klakegg/hugo:0.61.0-ext-ubuntu-onbuild
+
+pipelines:
+  branches:
+    hugo:
+      - step:
+          script:
+            # Change working directory to 'hugo-src', a subfolder of root of the current branch (hugo).
+            - cd "${BITBUCKET_CLONE_DIR}/hugo-src"
+
+            # Update/Initialise any submodules in the current branch.
+            # This will clone the submodule contents into their directories within the pipeline environment.  
+            - git submodule update --init --recursive
+
+            # Clone the master branch into the 'public' directory.
+            # This will enable updates to the master branch; namely the Hugo-generated output.
+            - git clone -b master ssh://git@bitbucket.org/himanshu106/himanshudave.bitbucket.io public
+
+            # Remove the entire contents of the master branch.
+            # This ensures that any content that was deleted during the latest commit (hugo branch) is also purged.
+            - rm -rf ./public/*
+
+            # Remove the '.git' file under any theme submodules.
+            # This is necessary to ensure that submodule files are also pushed to the master branch.
+            # Without this step, the Hugo build will fail to generate index.html, and other mandatory files.
+            - rm -rf ./themes/*/.git
+
+            # Build the Hugo website in the 'public' directory.
+            - hugo version
+            - hugo --baseURL "https://himanshudave.bitbucket.io" --destination public --verbose
+            - ls -al ./public
+            
+            # 'Minify' the build (optimize file sizes to improve load times)
+            - minify -r -o ./public ./public
+
+            # Push the build output to the master branch.
+            # Authentication is achieved through SSH key generation (pipeline settings) and exchange (Bitbucket account settings).
+            - git config --global user.email "hdave1@asu.edu"
+            - git config --global user.name "himanshu106"
+            - cd public && git status && git add . && git commit -m "Generated from $BITBUCKET_COMMIT" && git push
+
+            - echo "Finished!"
