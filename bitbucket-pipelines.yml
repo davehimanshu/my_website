@@ -10,7 +10,7 @@ pipelines:
       - step:
           script:
             # Change working directory to 'hugo-src', a subfolder of root of the current branch (hugo).
-            - cd "${BITBUCKET_CLONE_DIR}/hugo-src"
+            - cd "${BITBUCKET_CLONE_DIR}/public"
             # Update/Initialise any submodules in the current branch.
             # This will clone the submodule contents into their directories within the pipeline environment.
             - git submodule update --init --recursive
@@ -34,6 +34,6 @@ pipelines:
             # Push the build output to the master branch.
             # Authentication is achieved through SSH key generation (pipeline settings) and exchange (Bitbucket account settings).
             - git config --global user.email "hdave1@asu.edu"
-            - git config --global user.name "himanshu"
+            - git config --global user.name "himanshudave"
             - cd /target && git status && git add . && git commit -m "Generated from $BITBUCKET_COMMIT" && git push
             - echo "Finished!"
