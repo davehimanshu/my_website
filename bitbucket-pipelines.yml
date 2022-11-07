@@ -7,7 +7,7 @@ pipelines:
           deployment: production
           script:
             # Change working directory to 'hugo-src', a subfolder of root of the current branch (hugo).
-            - cd "${BITBUCKET_CLONE_DIR}"
+            - cd "${BITBUCKET_CLONE_DIR}/hugo-src"
 
             # Update/Initialise any submodules in the current branch.
             # This will clone the submodule contents into their directories within the pipeline environment.  
@@ -15,7 +15,7 @@ pipelines:
 
             # Clone the master branch into the 'public' directory.
             # This will enable updates to the master branch; namely the Hugo-generated output.
-            #- git clone -b main ssh://git@bitbucket.org/himanshu106/himanshu106.bitbucket.io public
+            - git clone -b main ssh://git@bitbucket.org/himanshu106/himanshu106.bitbucket.io public
 
             # Remove the entire contents of the master branch.
             # This ensures that any content that was deleted during the latest commit (hugo branch) is also purged.
