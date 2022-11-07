@@ -1,4 +1,4 @@
-image: amuraru/hugo-git-golang
+image: klakegg/hugo:0.68.0-ext-ubuntu-onbuild
 
 pipelines:
   branches:
