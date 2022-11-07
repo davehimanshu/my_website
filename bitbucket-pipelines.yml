@@ -27,7 +27,7 @@ pipelines:
 
             # Build the Hugo website in the 'public' directory.
             - hugo version
-            - hugo mod clean --all
+            - hugo mod clean --all --destination public --verbose
             - hugo --baseURL "https://himanshudave.bitbucket.io" --destination public --verbose
             - ls -al ./public
             
