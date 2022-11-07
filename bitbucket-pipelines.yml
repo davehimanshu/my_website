@@ -1,4 +1,4 @@
-image: amuraru/hugo
+image: amuraru/hugo-git-golang
 
 pipelines:
   branches:
