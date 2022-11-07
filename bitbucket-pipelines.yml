@@ -28,7 +28,7 @@ pipelines:
 
             # Build the Hugo website in the 'public' directory.
             - hugo version --verbose
-            - hugo --baseURL "https://himanshud106.bitbucket.io" --destination public --verbose
+            - hugo --baseURL "https://himanshu106.bitbucket.io" --destination public --verbose
             - ls -al ./public
             
             # 'Minify' the build (optimize file sizes to improve load times)
