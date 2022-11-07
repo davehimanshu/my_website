@@ -1,4 +1,4 @@
-image: klakegg/hugo:0.68.0-ext-ubuntu-onbuild
+image: klakegg/hugo:0.101.0-ext-ubuntu-onbuild
 
 pipelines:
   branches:
@@ -14,16 +14,16 @@ pipelines:
 
             # Clone the master branch into the 'public' directory.
             # This will enable updates to the master branch; namely the Hugo-generated output.
-            - git clone -b main ssh://git@bitbucket.org/himanshu106/himanshudave.bitbucket.io public
+            #- git clone -b main ssh://git@bitbucket.org/himanshu106/himanshudave.bitbucket.io public
 
             # Remove the entire contents of the master branch.
             # This ensures that any content that was deleted during the latest commit (hugo branch) is also purged.
-            - rm -rf ./public/*
+            #- rm -rf ./public/*
 
             # Remove the '.git' file under any theme submodules.
             # This is necessary to ensure that submodule files are also pushed to the master branch.
             # Without this step, the Hugo build will fail to generate index.html, and other mandatory files.
-            - rm -rf ./themes/*/.git
+            #- rm -rf ./themes/*/.git
 
             # Build the Hugo website in the 'public' directory.
             - hugo version --verbose
