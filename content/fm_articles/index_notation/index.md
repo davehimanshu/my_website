@@ -215,11 +215,11 @@ $$
 $$
 \begin{eqnarray}
 \hat{e}_1\times\hat{e}_2 &=& \hat{e}_3 \\\\
-\hat{e}_1\times\hat{e}_2 &=& \hat{e}_3 \\\\
-\hat{e}_1\times\hat{e}_2 &=& \hat{e}_3 \\\\
-\hat{e}_1\times\hat{e}_2 &=& \hat{e}_3 \\\\
-\hat{e}_1\times\hat{e}_2 &=& \hat{e}_3 \\\\
-\hat{e}_1\times\hat{e}_2 &=& \hat{e}_3 \\\\
+\hat{e}_2\times\hat{e}_3 &=& \hat{e}_1 \\\\
+\hat{e}_3\times\hat{e}_1 &=& \hat{e}_2 \\\\
+\hat{e}_2\times\hat{e}_1 &=& -\hat{e}_3 \\\\
+\hat{e}_3\times\hat{e}_2 &=& -\hat{e}_1 \\\\
+\hat{e}_1\times\hat{e}_3 &=& -\hat{e}_2 \\\\
 \end{eqnarray}
 $$
 
