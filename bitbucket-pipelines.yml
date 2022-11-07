@@ -4,6 +4,7 @@ pipelines:
   branches:
     hugo:
       - step:
+          deployment: production
           script:
             # Change working directory to 'hugo-src', a subfolder of root of the current branch (hugo).
             - cd "${BITBUCKET_CLONE_DIR}"
