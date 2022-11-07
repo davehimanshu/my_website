@@ -31,7 +31,7 @@ pipelines:
             - ls -al ./public
             
             # 'Minify' the build (optimize file sizes to improve load times)
-            - minify -r -o ./public ./public
+            #- minify -r -o ./public ./public
 
             # Push the build output to the master branch.
             # Authentication is achieved through SSH key generation (pipeline settings) and exchange (Bitbucket account settings).
