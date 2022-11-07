@@ -15,7 +15,7 @@ pipelines:
 
             # Clone the master branch into the 'public' directory.
             # This will enable updates to the master branch; namely the Hugo-generated output.
-            #- git clone -b main ssh://git@bitbucket.org/himanshu106/himanshudave.bitbucket.io public
+            - git clone -b main ssh://git@bitbucket.org/himanshu106/himanshu106.bitbucket.io public
 
             # Remove the entire contents of the master branch.
             # This ensures that any content that was deleted during the latest commit (hugo branch) is also purged.
@@ -28,7 +28,7 @@ pipelines:
 
             # Build the Hugo website in the 'public' directory.
             - hugo version --verbose
-            - hugo --baseURL "https://himanshudave.bitbucket.io" --destination public --verbose
+            - hugo --baseURL "https://himanshud106.bitbucket.io" --destination public --verbose
             - ls -al ./public
             
             # 'Minify' the build (optimize file sizes to improve load times)
