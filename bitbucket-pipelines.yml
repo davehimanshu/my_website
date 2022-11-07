@@ -1,0 +1,39 @@
+# This is an example Starter pipeline configuration
+# Use a skeleton to build, test and deploy using manual and parallel steps
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+
+image: klakegg/hugo:0.61.0-ext-ubuntu-onbuild
+pipelines:
+  branches:
+    hugo:
+      - step:
+          script:
+            # Change working directory to 'hugo-src', a subfolder of root of the current branch (hugo).
+            - cd "${BITBUCKET_CLONE_DIR}/hugo-src"
+            # Update/Initialise any submodules in the current branch.
+            # This will clone the submodule contents into their directories within the pipeline environment.
+            - git submodule update --init --recursive
+            # Clone the master branch into the 'target' directory.
+            # This will enable updates to the master branch; namely the Hugo-generated output.
+            - git clone -b master git@bitbucket.org:himanshu106/himanshudave.bitbucket.io.git /target
+            # Remove the entire contents of the master branch.
+            # This ensures that any content that was deleted during the latest commit (hugo branch) is also purged.
+            - rm -rf /target/*
+            # Remove the '.git' file under any theme submodules.
+            # This is necessary to ensure that submodule files are also pushed to the master branch.
+            # Without this step, the Hugo build will fail to generate index.html, and other mandatory files.
+            - rm -rf ./themes/*/.git
+            # Build the Hugo website in the 'target' directory.
+            - hugo version
+            - hugo --verbose --environment production --destination /target
+            - ls -al /target
+            # Add google site verification ID
+            - sed -i 's/.*<head>.*/ &\n <meta name="google-site-verification" content="BXJbHwx2nUYSGtfUfJVrvOWJ1SlCaceANFBkzBkElkg"\/>/' /target/index.html
+            
+            # Push the build output to the master branch.
+            # Authentication is achieved through SSH key generation (pipeline settings) and exchange (Bitbucket account settings).
+            - git config --global user.email "hdave1@asu.edu"
+            - git config --global user.name "himanshu"
+            - cd /target && git status && git add . && git commit -m "Generated from $BITBUCKET_COMMIT" && git push
+            - echo "Finished!"
