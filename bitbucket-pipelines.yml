@@ -1,4 +1,4 @@
-image: klakegg/hugo:ext-alpine
+image: jojomi/hugo:latest
 
 pipelines:
   branches:
