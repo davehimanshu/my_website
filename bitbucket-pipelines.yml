@@ -1,4 +1,4 @@
-image: klakegg/hugo:0.81.0-ubuntu
+image: klakegg/hugo:0.101.0-ubuntu
 
 pipelines:
   branches:
