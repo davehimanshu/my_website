@@ -1,4 +1,4 @@
-image: jguyomard/hugo-builder:latest
+image: joergklein/hugo:latest
 
 pipelines:
   branches:
