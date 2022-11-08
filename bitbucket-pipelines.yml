@@ -1,4 +1,4 @@
-image: klakegg/hugo:latest
+image: peaceiris/hugo:v0.101.0-full
 
 pipelines:
   branches:
