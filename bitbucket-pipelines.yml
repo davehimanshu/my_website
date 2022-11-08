@@ -1,4 +1,4 @@
-image: ghcr.io/peaceiris/hugo:v0.x.x-full
+image: beva/hugo:latest
 
 pipelines:
   branches:
