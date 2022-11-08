@@ -1,4 +1,4 @@
-image: peaceiris/hugo:v0.101.0-full
+image: klakegg/hugo:0.81.0-ubuntu
 
 pipelines:
   branches:
