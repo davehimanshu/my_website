@@ -1,4 +1,4 @@
-image: beva/hugo:latest
+image: klakegg/hugo:ext-alpine
 
 pipelines:
   branches:
