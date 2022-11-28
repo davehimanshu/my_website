@@ -208,6 +208,7 @@ Lets take a look at some examples using scalar calculations:
     {{< /math >}}
 
 -   **The cross product in index notation**
+
 Let's consider the same coordinate system shown in the figure above. Using conventional right-hand rule for cross products, we have
 $$
 \hat{e}_1\times\hat{e}_1 = \hat{e}_2\times\hat{e}_2 = \hat{e}_3\times\hat{e}_3 = 0
@@ -224,4 +225,71 @@ $$
 $$
 
 To write this using the index notation approach, we have to introduce a new symbol $\epsilon_{ijk}$, commonly known as the Levi-Cevita  tensor. This symbol has the following properties:
-1.  Hello world  
+1.  $\epsilon_{ijk} = 1$ if (ijk) is an even cyclic permutation of (123), *i.e.* $\epsilon_{123}=\epsilon_{231}=\epsilon_{312}=1$.
+2.  $\epsilon_{ijk} = -1$ if (ijk) is a odd cyclic permutation of (123), *i.e.* $\epsilon_{213}=\epsilon_{321}=\epsilon_{132}=-1$.
+3.  $\epsilon_{ijk} = 0$ if two or more subscripts are the same, *i.e.* $\epsilon_{111}=\epsilon_{112}=\epsilon_{313}=0$ *etc*.
+
+Hence we can not rewrite our cross product expressions as one generalized expression such that:
+{{< math >}}
+$$
+\hat{e}_i\times\hat{e}_j = \epsilon_{ijk}\hat{e}_k
+$$
+{{< /math >}}
+
+Now lets apply the above knowledge to the cross product of two vectors:
+{{< math >}}
+$$
+\overrightarrow{a}\times\overrightarrow{b} = (a_i\hat{e}_i)\times(b_j\hat{e}_j) = a_ib_j\hat{e}_i\times\hat{e}_j=a_ib_j\epsilon_{ijk}\hat{e}_k
+$$
+{{< /math >}}
+Thus, we can write the cross product between two vectors as,
+{{< math >}}
+$$
+\overrightarrow{a}\times\overrightarrow{b} = \epsilon_{ijk}a_ib_j\hat{e}_k
+$$
+{{< /math >}}
+
+Finally, lets introduce one more property of the Levi-Cevita tensor. This property is the product of two tensors such that,
+{{< math >}}
+$$
+\epsilon_{ijk}\epsilon_{klm} = \delta_{il}\delta_{jm} - \delta_{im}\delta_{jl}
+$$
+{{< /math >}}
+
+- **Vector identity examples**
+
+Let's now take a look at two vector identity examples in order to highlight the use of index notation.
+
+1. $\overrightarrow{a}\times\left(\overrightarrow{b}\times\overrightarrow{c}\right) = \left(\overrightarrow{a}\cdot\overrightarrow{c}\right)\overrightarrow{b}-\left(\overrightarrow{a}\cdot\overrightarrow{b}\right)\overrightarrow{c}$
+
+{{< math >}}
+$$
+\begin{eqnarray}
+\overrightarrow{a}\times\left(\overrightarrow{b}\times\overrightarrow{c}\right) &=& (a_i\hat{e}_i)\times(\epsilon_{jkl}b_jc_k\hat{e}_l)\\\\
+&=& \epsilon_{jkl}a_ib_jc_k(\hat{e}_i\times\hat{e}_l)\\\\
+&=& \epsilon_{jkl}a_ib_jc_k\epsilon_{ilh}\hat{e}_h\\\\
+&=& \epsilon_{jkl}\epsilon_{ilh}a_ib_jc_k\hat{e}_h\\\\
+&=& (\delta_{jh}\delta_{ki} - \delta_{ji}\delta_{kh})a_ib_jc_k\hat{e}_h\\\\
+&=& \delta_{jh}\delta_{ki}a_ib_jc_k\hat{e}_h - \delta_{ji}\delta_{kh}a_ib_jc_k\hat{e}_h\\\\
+&=& (a_ic_i)(b_j\hat{e}_j) - (a_ib_i)(c_k\hat{e}_k)\\\\
+&=& \left(\overrightarrow{a}\cdot\overrightarrow{c}\right)\overrightarrow{b} - \left(\overrightarrow{a}\cdot\overrightarrow{b}\right)\overrightarrow{c}
+\end{eqnarray}
+$$
+{{< /math >}}
+
+2.  $\overrightarrow{a}\cdot\left(\overrightarrow{b}\times\overrightarrow{c}\right) = \overrightarrow{c}\cdot\left(\overrightarrow{a}\times\overrightarrow{b}\right) = \overrightarrow{b}\cdot\left(\overrightarrow{c}\times\overrightarrow{a}\right)$
+
+{{< math >}}
+$$
+\begin{eqnarray}
+\overrightarrow{a}\cdot\left(\overrightarrow{b}\times\overrightarrow{c}\right) &=& (a_i\hat{e}_i)\cdot(\epsilon_{jklm}b_jc_k\hat{e_m})\\\\
+&=& \epsilon_{jkm}a_ib_jc_k(\hat{e}_i\cdot\hat{e}_m)\\\\
+&=& \epsilon_{jkm}a_ib_jc_k\delta_{im}\\\\
+&=& \epsilon_{jki}a_ib_jc_k\\\\
+&=& \epsilon_{ijk}a_ib_jc_k\\\\
+&=& \overrightarrow{a}\cdot\left(\overrightarrow{b}\times\overrightarrow{c}\right)\\\\
+&=& \overrightarrow{c}\cdot\left(\overrightarrow{a}\times\overrightarrow{b}\right)\\\\
+&=& \overrightarrow{b}\cdot\left(\overrightarrow{c}\times\overrightarrow{a}\right)
+\end{eqnarray}
+$$
+{{< /math >}}
