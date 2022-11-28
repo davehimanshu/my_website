@@ -85,19 +85,4 @@ content:
         icon_pack: fas
         text: Learn More
         url: ../research_themes/example/
-    - title: Predictive stock models
-      content:
-      align: right
-      background:
-        position: center
-        color: '#062889'
-        brightness: 0.5
-        media: /home_rt/psm.jpg
-        fit: contain
-      link:
-        icon: fa-regular fa-treasure-chest
-        icon_pack: fas
-        text: Learn More
-        url: ../research_themes/example/
-
 ---
