@@ -6,7 +6,7 @@ title: Himanshu Dave
 superuser: true
 
 # Role/position/tagline
-role: Ph.D student
+role: Ph.D candidate
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -29,9 +29,12 @@ education:
   - course: PhD in Mechanical Engineering (focus in computational fluid dynamics)
     institution: Arizona State University
     year: 2019 - Current
+  - course: MSc (in passing) in Mechanical Engineering
+    institution: Arizona State University
+    year: 2019 - 2022
   - course: BSc (Honors) in Mechanical Engineering
     institution: Arizona State University
-    year: 2015-2019
+    year: 2015 - 2019
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
@@ -66,4 +69,4 @@ Himanshu Dave is a Ph.D student under Prof. Kasbaoui @ Arizona State University.
   
 His research interests specifically pertain to particle-laden flows using Eulerian-Lagrangian methods, and creating novel computational methods to increase simulation fidelity for multiphase flows using the immersed boundary framework. Furthermore, his interests are also in virtual and augmented reality as a means to visualize large sets of simulation data. In his free time, he is an avid snowboarder, rock climber and loves playing with his dog sophie. 
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/cv.pdf" "newtab" >}}CV{{< /staticref >}}.
