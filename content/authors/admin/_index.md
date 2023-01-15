@@ -6,7 +6,7 @@ title: Himanshu Dave
 superuser: true
 
 # Role/position/tagline
-role: Ph.D candidate
+role: Ph.D Candidate
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -50,13 +50,12 @@ social:
 - icon: linkedin
   icon_pack: fab
   link: https://linkedin.com/in/dave-himanshu
-
 # Link to a PDF of your resume/CV.
 # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.toml`, 
 # and uncomment the lines below.
-# - icon: cv
-#   icon_pack: ai
-#   link: uploads/resume.pdf
+- icon: cv
+  icon_pack: ai
+  link: uploads/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
@@ -69,4 +68,4 @@ Himanshu Dave is a Ph.D student under Prof. Kasbaoui @ Arizona State University.
   
 His research interests specifically pertain to particle-laden flows using Eulerian-Lagrangian methods, and creating novel computational methods to increase simulation fidelity for multiphase flows using the immersed boundary framework. Furthermore, his interests are also in virtual and augmented reality as a means to visualize large sets of simulation data. In his free time, he is an avid snowboarder, rock climber and loves playing with his dog sophie. 
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/cv.pdf" "newtab" >}}CV{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/cv.pdf" "newtab" >}}CV{{< /staticref >}}
