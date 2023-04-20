@@ -22,12 +22,25 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
+  - title: Summer Intern
+    company: Los Alamos National Lab
+    company_logo: lanl
+    location: Los Alamos, New Mexico
+    date_start: '2023-05-15'
+    date_end: ''
+    description: |2-
+        Responsibilities include:
+        
+        * Assess the applicability of stability theories for the cut-cell method being developed at LANL.
+        * Perform optimization procedures and obtain a novel set of higher-order, stable cut-cell stencils for solving the Navier-Stokes equation.
+        * Performing Large scale optimization runs using high-performance computing resources. 
+
   - title: Graduate Research Associate
     company: Kasbaoui Research Group @ Arizona State University
     company_logo: krg
     location: Tempe, Arizona
     date_start: '2019-07-01'
-    date_end: ''
+    date_end: '2023-05-15'
     description: |2-
         Responsibilities include:
         
@@ -39,9 +52,9 @@ experience:
   - title: NSF Graduate Intern
     company: Los Alamos National Labaratory
     company_logo: lanl
-    location: Tempe, Arizona
+    location: Los Alamos, New Mexico
     date_start: '2022-07-01'
-    date_end: ''
+    date_end: '2022-12-31'
     description: |2-
         Responsibilities include:
         
