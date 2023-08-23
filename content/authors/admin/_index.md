@@ -66,6 +66,6 @@ highlight_name: false
 
 Himanshu Dave is a Ph.D student under Prof. Kasbaoui @ Arizona State University. His interests include multiphase flows, parallel computing systems and visualization techniques.   
   
-His research interests specifically pertain to particle-laden flows using Eulerian-Lagrangian methods, and creating novel computational methods to increase simulation fidelity for multiphase flows using the immersed boundary framework. Furthermore, his interests are also in virtual and augmented reality as a means to visualize large sets of simulation data. In his free time, he is an avid snowboarder, rock climber, hiker and loves playing with his dog sophie. 
+His research interests specifically pertain to particle-laden flows using Eulerian-Lagrangian methods, and creating novel computational methods to increase simulation fidelity for multiphase flows using the immersed boundary framework. Furthermore, his interests are also in virtual and augmented reality as a means to visualize large sets of simulation data. In his free time, he is an avid snowboarder, rock climber and loves playing with his dog sophie. 
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/cv.pdf" "newtab" >}}CV{{< /staticref >}}
