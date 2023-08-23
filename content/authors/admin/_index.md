@@ -28,13 +28,13 @@ education:
   courses:
   - course: PhD in Mechanical Engineering (focus in computational fluid dynamics)
     institution: Arizona State University
-    year: 2019 - Current
-  - course: MSc (in passing) in Mechanical Engineering
+    year: December 2023
+  - course: MSc in Mechanical Engineering
     institution: Arizona State University
-    year: 2019 - 2022
+    year: May 2023
   - course: BSc (Honors) in Mechanical Engineering
     institution: Arizona State University
-    year: 2015 - 2019
+    year: May 2019
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons

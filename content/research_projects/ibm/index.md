@@ -54,5 +54,5 @@ The new Volume Filtered Immersed Boundary (VFIB) method is tested against variou
 
 **Related Publications**
 
-- Dave, H.,Herrmann, M. & Kasbaoui, M.H. The volume-filtering immersed boundary method. arXiv: 2210.00148 (2022).
+- Dave, H., Herrmann, M. & Kasbaoui, M. H., The volume-filtering immersed boundary method, Journal of Computational Physics, 487, 112136 (08/15/2023).
  

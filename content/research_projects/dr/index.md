@@ -56,4 +56,6 @@ A remarkable obersvation is how these ropes tend to remain stable for long perio
 - Top-down view of pseudocolor of fluid velocity overlayed by particle volume fraction near the wall for particles at $\mathrm{St}^+ = 30$. We observe the long ropes coinciding with the low-speed regions of the flow. 
 {{< video src="lss.mp4" controls="yes" >}}
 
+**Related Publications**
 
+- Dave, H. & Kasbaoui, M. H., Mechanisms of drag reduction by semi-dilute inertial particles in turbulent channel flow, Physical Review Fluids, 8, 084305 (08/21/2023).

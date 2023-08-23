@@ -9,7 +9,7 @@ headless: true
 # Order that this section appears on the page.
 weight: 40
 
-title: Featured Publications
+title: Refereed Journal Publications
 subtitle: ""
 
 content:
